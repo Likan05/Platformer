@@ -6,11 +6,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float _speed;
 
     private float _direction;
+    private int _rotatePlayer;
     private bool _moveRight;
 
     private void Start()
     {
         _direction = 1.5f;
+        _rotatePlayer = -180;
     }
 
     private void Update()
@@ -22,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
         {
             if (!_moveRight)
             {               
-                transform.eulerAngles = new Vector3(0, -180, 0);
+                transform.eulerAngles = new Vector3(0, _rotatePlayer, 0);
                 _moveRight = true;
             }
             else

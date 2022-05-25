@@ -26,10 +26,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnValidate()
     {
-        if (_speed < 1f)
-            _speed = 2;
-        if (_jumpForce < 150)
-            _jumpForce = 150;
+        byte minSpeed = 1;
+        byte setSpeed = 2;
+        byte minForce = 150;
+        byte setForce = 170;
+
+        if (_speed < minSpeed)
+            _speed = setSpeed;
+        if (_jumpForce < minForce)
+            _jumpForce = setForce;
     }
 
     private void Update()

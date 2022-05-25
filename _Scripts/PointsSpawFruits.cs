@@ -20,9 +20,10 @@ public class PointsSpawFruits : MonoBehaviour
 
     private void ArrangeRandom()
     {
+        int maxFruits = 5;
         for (int i = 0; i < _points.Length; i++)
         {
-            int index = Random.Range(0, 5);
+            int index = Random.Range(0, maxFruits);
             Instantiate(_prefabFruits[index], new Vector3(_points[i].position.x, _points[i].position.y, 0), Quaternion.identity);
         }
     }

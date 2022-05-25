@@ -7,8 +7,7 @@ public class GameOwer : MonoBehaviour
     {
         if(collision.TryGetComponent<PlayerController>(out PlayerController player))
         {
-            Debug.Log("Game Ower!");
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(0);
         }
     }
 }
